@@ -11,7 +11,7 @@ corner_3 = lambda pic: np.array(pic)[:size, -size:]
 corner_4 = lambda pic: np.array(pic)[-size:, -size:]
 
 def clasification(image11, image22):
-    image1 = image22.resize((1024, 1024))
+    image1 = image11.resize((1024, 1024))
     image2 = image22.resize((1024, 1024))
     our_RMSE = RMSE(np.array(image1), np.array(image2))
     if our_RMSE == 0:
